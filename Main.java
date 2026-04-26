@@ -35,7 +35,7 @@ public class Main {
                     Main.save_text();
                     break;
                 default:
-                    if (!skip_error){
+                    if (skip_error == false){
                         System.out.println("Error: такой команды не найдено");
                     }
             }

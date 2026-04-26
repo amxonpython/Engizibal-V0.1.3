@@ -36,7 +36,7 @@ public class test_class {
             }
             if (action.equals("/")){
                 if(number2 != 0){
-                    sum = (number / number2);
+                    sum = ((double) number / number2);
                 }else {
                     System.out.println("Error: делить на 0 нельзя");
                     error = true;

@@ -15,7 +15,7 @@ public class Main {
             System.out.println("выберите команду");
             String text = scanner.nextLine();
             int index = text.indexOf(echo);
-            
+
             if (index != -1){
                 System.out.println(text);
                 skip_error = true;
@@ -63,7 +63,7 @@ public class Main {
                     System.out.println("удалено");
                 }
                 if (text.equals("watch")){
-                    if(save_text.equals("")){
+                    if(save_text.isEmpty()){
                         System.out.println("пусто");
                     }else {
                         System.out.println(save_text);

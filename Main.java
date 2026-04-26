@@ -7,11 +7,19 @@ public class Main {
     static String save_text = "";
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        String echo = ("echo");
+        boolean skip_error = false;
 
         boolean working = true;
         while (working){
             System.out.println("выберите команду");
             String text = scanner.nextLine();
+            int index = text.indexOf(echo);
+
+            if (index != -1){
+                System.out.println(text);
+                skip_error = true;
+            }
             switch (text){
                 case "calculator":
                     test_class.calculator();
@@ -27,7 +35,9 @@ public class Main {
                     Main.save_text();
                     break;
                 default:
-                    System.out.println("Error: такой команды не найдено");
+                    if (!skip_error){
+                        System.out.println("Error: такой команды не найдено");
+                    }
             }
         }
     }

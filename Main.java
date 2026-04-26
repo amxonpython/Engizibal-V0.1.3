@@ -1,3 +1,4 @@
+import clases.classes;
 import clases.data;
 import clases.test_class;
 
@@ -7,6 +8,8 @@ public class Main {
     static String save_text = "";
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+
+
         String echo = ("echo");
         boolean skip_error = false;
 
@@ -35,8 +38,16 @@ public class Main {
                     Main.save_text();
                     break;
                 default:
-                    if (!skip_error) {
-                        System.out.println("Error: такой команды не найдено");
+                        if (text.equals("time") || text.equals("date")){
+                            if (text.equals("time")){
+                                classes.time();
+                            }else {
+                                classes.date();
+                            }
+                            skip_error = true;
+                        }
+                        if (!skip_error){
+                            System.out.println("Error: такой команды не найдено");
                     }
                 skip_error = false;
             }

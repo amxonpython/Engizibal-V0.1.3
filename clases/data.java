@@ -6,6 +6,8 @@ public class data {
         System.out.println("saved text - блокнот/сохранить текст");
         System.out.println("exit - выход из программы");
         System.out.println("echo - вывести введённый текст");
+        System.out.println("date - показать дату");
+        System.out.println("time - показать время");
         System.out.println();
     }
 }

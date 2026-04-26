@@ -42,7 +42,7 @@ public class test_class {
                     error = true;
                 }
             }
-            if (error == false){
+            if (!error){
                 System.out.println("результат: " + sum);
             }
         }else {
